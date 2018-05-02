@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import UIKit
 
 protocol NewsFeedViewModelProtocol {
-    
-    var articles:Articles? { get }
+    var articles:[Article] { get }
+    var dataFetched:(() -> ())? { get set }
+    var dataSource:[UITableViewCell]  { get }
 }

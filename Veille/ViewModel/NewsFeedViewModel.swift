@@ -7,25 +7,60 @@
 //
 
 import Foundation
+import UIKit
 
 class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
-    var articles: Articles?
+    var dataSource: [UITableViewCell] = [UITableViewCell]() {
+        didSet {
+            self.dataFetched?()
+        }
+    }
+    //should implement NewsFeedProtocol and ViewModelTableViewProtocol
+    var dataFetched: (() -> ())?
     
-    func fetchData(){
+    lazy var articles: [Article] = [Article]()
+    
+    //@Todo => if network is unavailable -> CoreData
+    /**
+     Fetching data from server and return this newsFeedViewModel as instance with all our articles loaded and ready
+     */
+    func fetchData(_ completion: @escaping ((Articles?) -> Void)){
         APIService().fetchArticles { (dataReceived) in
             do {
-                let articlesJson = try JSONSerialization.jsonObject(with: dataReceived, options: JSONSerialization.ReadingOptions.allowFragments)
-                print(articlesJson)
-                //self.articles = try JSONDecoder().decode(Articles.self, from: articlesJson)
-            } catch {
-                print("cannot decode data")
-                //print(articles)
+                let articlesReceived = try JSONDecoder().decode(Articles.self, from: dataReceived)
+                completion(articlesReceived)
+            } catch let error as NSError {
+                print(error)
+                completion(nil)
             }
         }
     }
     
+    func processFetchedArticles(articles: Articles) {
+        self.articles = articles.articles
+        var articlesCells:[UITableViewCell] = [UITableViewCell]()
+        
+        articlesCells = self.articles.map({ (currentArticle: Article) -> UITableViewCell in
+            let articleCell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: "articleCell")
+            articleCell.textLabel?.text = currentArticle.title
+            articleCell.detailTextLabel?.text = currentArticle.link.absoluteString
+            return articleCell
+        })
+        
+        self.dataSource = articlesCells
+    }
+    
+    
+    
     override init() {
         super.init()
-        self.fetchData()
+    
+        self.fetchData { [weak self] articles in
+            if let receivedArticles = articles {
+                self?.processFetchedArticles(articles: receivedArticles)
+            }else {
+                print("Error while fetching articles") //Replace with try?
+            }
+        }
     }
 }

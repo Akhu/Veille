@@ -13,5 +13,5 @@ struct Tags: Codable {
 }
 
 class Tag: Codable {
-    let name:String
+    let name:String?
 }
