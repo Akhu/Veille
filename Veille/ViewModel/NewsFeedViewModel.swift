@@ -24,20 +24,14 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
     /**
      Fetching data from server and return this newsFeedViewModel as instance with all our articles loaded and ready
      */
-    func fetchData(_ completion: @escaping ((Articles?) -> Void)){
+    func fetchData(_ completion: @escaping (([Article]?) -> Void)){
         APIService().fetchArticles { (dataReceived) in
-            do {
-                let articlesReceived = try JSONDecoder().decode(Articles.self, from: dataReceived)
-                completion(articlesReceived)
-            } catch let error as NSError {
-                print(error)
-                completion(nil)
-            }
+            completion(dataReceived)
         }
     }
     
-    func processFetchedArticles(articles: Articles) {
-        self.articles = articles.articles
+    func processFetchedArticles(articles: [Article]) {
+        self.articles = articles
         var articlesCells:[UITableViewCell] = [UITableViewCell]()
         
         articlesCells = self.articles.map({ (currentArticle: Article) -> UITableViewCell in

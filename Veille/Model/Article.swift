@@ -7,20 +7,11 @@
 //
 
 import Foundation
-import Alamofire
-
-struct Articles: Codable {
-    let articles: [Article]
-    
-    enum CodingKeys: String, CodingKey {
-        case articles = "data"
-    }
-}
 
 class Article: Codable {
     
     var title:String
-    var summary:String?
+    var description:String?
     var link:URL
     var imageURL:URL?
     //var tags:[String]?
@@ -31,8 +22,6 @@ class Article: Codable {
         self.link = link
         self.title = title
     }
-    
-    
     
     init() {
         self.id = UUID()

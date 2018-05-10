@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Alamofire
 
 class APIService {
     
@@ -19,14 +18,29 @@ class APIService {
         
     }
     
-    func fetchArticles(_ completion: @escaping ((Data) -> Void)) {
-        let url = baseUrl.appendingPathComponent("article")
-        
-        Alamofire.request(url).responseData { (response) in
-            if let data = response.data {
-                print(String(data: data, encoding: .utf8))
-                completion(data)
+    func fetchArticles(_ completion: @escaping (([Article]) -> Void)) {
+        if let url = Bundle.main.url(forResource: "mockData", withExtension: "plist") {
+            do {
+                let data = try Data(contentsOf: url)
+                print(String(bytes: data, encoding: .utf8))
+                let decodedData = try PropertyListDecoder().decode([Article].self, from: data)
+                completion(decodedData)
+            } catch let error as NSError {
+                print(error.description)
+                completion([Article]())
             }
+            
+        }else {
+            completion([Article]())
         }
+        
+//        let url = baseUrl.appendingPathComponent("article")
+//
+//        Alamofire.request(url).responseData { (response) in
+//            if let data = response.data {
+//                print(String(data: data, encoding: .utf8))
+//                completion(data)
+//            }
+//        }
     }
 }
