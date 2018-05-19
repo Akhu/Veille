@@ -9,15 +9,15 @@
 import Foundation
 
 class APIService {
-    
+
     typealias JSON = [String:Any]
-    
+
     let baseUrl: URL = URL(string: "http://localhost:3030")!
-    
+
     init() {
-        
+
     }
-    
+
     func returnArticlesFromMock() -> [Article] {
         if let url = Bundle.main.url(forResource: "mockData", withExtension: "plist") {
             do {
@@ -33,10 +33,10 @@ class APIService {
                 return [Article]()
             }
         }
-        
+
         return [Article]()
     }
-    
+
     func fetchArticles(_ completion: @escaping (([Article]) -> Void)) {
         if let url = Bundle.main.url(forResource: "mockData", withExtension: "plist") {
             do {
@@ -55,11 +55,11 @@ class APIService {
                 print(error.description)
                 completion([Article]())
             }
-            
+
         }else {
             completion([Article]())
         }
-        
+
 //        let url = baseUrl.appendingPathComponent("article")
 //
 //        Alamofire.request(url).responseData { (response) in

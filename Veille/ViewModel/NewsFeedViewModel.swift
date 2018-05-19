@@ -19,7 +19,7 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
             }
         }
     }
-    
+
     var dataSource: [UITableViewCell] = [UITableViewCell]() {
         didSet {
             self.dataFetched?()
@@ -27,9 +27,9 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
     }
     //should implement NewsFeedProtocol and ViewModelTableViewProtocol
     var dataFetched: (() -> ())?
-    
+
     lazy var articles: [Article] = [Article]()
-    
+
     //@Todo => if network is unavailable -> CoreData
     /**
      Fetching data from server and return this newsFeedViewModel as instance with all our articles loaded and ready
@@ -38,43 +38,43 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
         APIService().fetchArticles { (dataReceived) in
             print(dataReceived)
         }
-        
+
         CoreDataStack.store.fetchArticlesFromCoreData()
-        
+
         completion(CoreDataStack.store.fetchedArticles)
-        
-        
+
+
     }
-    
+
     func addArticle() {
         let articleMockList = APIService().returnArticlesFromMock()
-        
+
         for articleMock in articleMockList {
             CoreDataStack.store.persistArticle(article: articleMock)
         }
-        
+
         CoreDataStack.store.saveContext()
     }
-    
+
     func processFetchedArticles(articles: [Article]) {
         self.articles = articles
         var articlesCells:[UITableViewCell] = [UITableViewCell]()
-        
+
         articlesCells = self.articles.map({ (currentArticle: Article) -> UITableViewCell in
             let articleCell = UITableViewCell(style: UITableViewCellStyle.value2, reuseIdentifier: "articleCell")
             articleCell.textLabel?.text = currentArticle.title
             articleCell.detailTextLabel?.text = currentArticle.link.absoluteString
             return articleCell
         })
-        
+
         self.dataSource = articlesCells
     }
-    
-    
-    
+
+
+
     override init() {
         super.init()
-    
+
         self.refresh()
     }
 }
