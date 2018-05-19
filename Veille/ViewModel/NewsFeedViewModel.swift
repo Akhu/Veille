@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
+    func refresh() {
+        self.fetchData { [weak self] articles in
+            if let receivedArticles = articles {
+                self?.processFetchedArticles(articles: receivedArticles)
+            }else {
+                print("Error while fetching articles") //Replace with try?
+            }
+        }
+    }
+    
     var dataSource: [UITableViewCell] = [UITableViewCell]() {
         didSet {
             self.dataFetched?()
@@ -24,20 +34,30 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
     /**
      Fetching data from server and return this newsFeedViewModel as instance with all our articles loaded and ready
      */
-    func fetchData(_ completion: @escaping ((Articles?) -> Void)){
+    func fetchData(_ completion: @escaping (([Article]?) -> Void)){
         APIService().fetchArticles { (dataReceived) in
-            do {
-                let articlesReceived = try JSONDecoder().decode(Articles.self, from: dataReceived)
-                completion(articlesReceived)
-            } catch let error as NSError {
-                print(error)
-                completion(nil)
-            }
+            print(dataReceived)
         }
+        
+        CoreDataStack.store.fetchArticlesFromCoreData()
+        
+        completion(CoreDataStack.store.fetchedArticles)
+        
+        
     }
     
-    func processFetchedArticles(articles: Articles) {
-        self.articles = articles.articles
+    func addArticle() {
+        let articleMockList = APIService().returnArticlesFromMock()
+        
+        for articleMock in articleMockList {
+            CoreDataStack.store.persistArticle(article: articleMock)
+        }
+        
+        CoreDataStack.store.saveContext()
+    }
+    
+    func processFetchedArticles(articles: [Article]) {
+        self.articles = articles
         var articlesCells:[UITableViewCell] = [UITableViewCell]()
         
         articlesCells = self.articles.map({ (currentArticle: Article) -> UITableViewCell in
@@ -55,12 +75,6 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
     override init() {
         super.init()
     
-        self.fetchData { [weak self] articles in
-            if let receivedArticles = articles {
-                self?.processFetchedArticles(articles: receivedArticles)
-            }else {
-                print("Error while fetching articles") //Replace with try?
-            }
-        }
+        self.refresh()
     }
 }

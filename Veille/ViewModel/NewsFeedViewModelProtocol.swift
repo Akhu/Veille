@@ -13,4 +13,6 @@ protocol NewsFeedViewModelProtocol {
     var articles:[Article] { get }
     var dataFetched:(() -> ())? { get set }
     var dataSource:[UITableViewCell]  { get }
+    func refresh()
+    func addArticle()
 }

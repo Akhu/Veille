@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<!--
-   mockData.plist
-   Veille
-
-   Created by Anthony Da Cruz on 02/05/2018.
-   Copyright (c) 2018 Anthony Da Cruz. All rights reserved.
--->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-    
-    </dict>
+<array>
+	<dict>
+		<key>imageURL</key>
+		<string>http://img.lemde.fr/2018/05/01/0/0/3500/2329/534/0/60/0/c18dfc2_NIC04_EU-POPULISTS-LEPEN_0501_1A.JPG</string>
+		<key>title</key>
+		<string>Article title 1</string>
+		<key>description</key>
+		<string>Some description for the first article, it could be very long, but also very short.</string>
+		<key>link</key>
+		<string>http://www.lemonde.fr/politique/article/2018/05/02/le-rassemblement-au-c-ur-du-1er-mai-du-front-national_5293094_823448.html</string>
+	</dict>
+	<dict>
+		<key>imageURL</key>
+		<string>https://cdn-images-1.medium.com/max/2000/1*yjDRq_ZSziNaSBy4Ct3R9g.png</string>
+		<key>title</key>
+		<string>UI Interactions of the week #124</string>
+		<key>description</key>
+		<string>Some description for the first article, it could be very long, but also very short.</string>
+		<key>link</key>
+		<string>https://medium.muz.li/ui-interactions-of-the-week-124-44195d37105f</string>
+	</dict>
+</array>
 </plist>

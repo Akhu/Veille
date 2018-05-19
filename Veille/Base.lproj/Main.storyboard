@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HIK-F6-WfD">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <rect key="frame" x="0.0" y="103" width="375" height="675"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="articleCell" textLabel="uel-Th-b3F" detailTextLabel="MKU-b5-XPa" style="IBUITableViewCellStyleValue1" id="21K-eF-ftA">
@@ -54,13 +54,22 @@
                                     <outlet property="delegate" destination="9pv-A4-QxB" id="n7X-kH-Qu6"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-NX-US8">
+                                <rect key="frame" x="300" y="53" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="rightViewButtonAction:" destination="9pv-A4-QxB" eventType="touchUpInside" id="rY5-OL-hFg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="HIK-F6-WfD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="2ub-UQ-dgv"/>
                             <constraint firstItem="HIK-F6-WfD" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="8Ui-oW-2Hy"/>
                             <constraint firstItem="HIK-F6-WfD" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="MVW-bB-ypE"/>
+                            <constraint firstItem="VNH-NX-US8" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="9" id="p66-AA-2ao"/>
+                            <constraint firstItem="HIK-F6-WfD" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="59" id="vIM-gR-iWP"/>
                             <constraint firstItem="HIK-F6-WfD" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="xxE-GA-8Sr"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="VNH-NX-US8" secondAttribute="trailing" constant="29" id="yR0-1h-7vf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -71,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1449" y="-223"/>
+            <point key="canvasLocation" x="1448.8" y="-223.15270935960592"/>
         </scene>
         <!--Detail News View Controller-->
         <scene sceneID="OLK-qF-lMr">

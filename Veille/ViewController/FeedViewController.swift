@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Alamofire
 
 class FeedViewController: UIViewController {
 
@@ -20,6 +19,7 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
+        //let article = Article(entity: <#T##NSEntityDescription#>, insertInto: <#T##NSManagedObjectContext?#>)
         self.initView()
         
         self.bindingViewModel()
@@ -28,6 +28,10 @@ class FeedViewController: UIViewController {
     
     func initView(){
         //Initializing view with placeholder / loader
+    }
+    @IBAction func rightViewButtonAction(_ sender: UIButton) {
+        self.newsFeedVM.refresh()
+        self.newsFeedVM.addArticle()
     }
     
     func bindingViewModel(){

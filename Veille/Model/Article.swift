@@ -7,36 +7,70 @@
 //
 
 import Foundation
-import Alamofire
+import CoreData
 
-struct Articles: Codable {
-    let articles: [Article]
+class Article: NSManagedObject, Decodable {
+    
+    @NSManaged var title:String!
+    @NSManaged var summary:String?
+    @NSManaged var link:URL!
+    @NSManaged var image:URL?
+    @NSManaged var createdDate: Date
+    //var tags:[String]?
+    @NSManaged var id:UUID
     
     enum CodingKeys: String, CodingKey {
-        case articles = "data"
+        case title
+        case summary = "description"
+        case link
+        case image = "imageURL"
+        case createdDate = "date"
+    }
+    
+    required convenience init(from decoder: Decoder) throws {
+        
+        guard let contextUserInfoKey = CodingUserInfoKey.context else { fatalError("cannot find context key") }
+        
+        guard let managedObjectContext = decoder.userInfo[contextUserInfoKey] as? NSManagedObjectContext else { fatalError("cannot Retrieve context") }
+        
+        guard let entity = NSEntityDescription.entity(forEntityName: "Article", in: managedObjectContext) else { fatalError() }
+        
+        self.init(entity: entity, insertInto: nil)
+        
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = UUID()
+        self.createdDate = Date()
+        self.title = try values.decode(String.self, forKey: .title)
+        
+        self.summary = try values.decode(String.self, forKey: .summary)
+        
+        guard let linkString = try values.decodeIfPresent(String.self, forKey: .link) else { return }
+        if let linkUrl = URL(string: linkString) {
+            self.link = linkUrl
+        }
+        
+        if let imageURLString = try values.decodeIfPresent(String.self, forKey: .image) {
+            if let imageURL = URL(string: imageURLString){
+                self.image = imageURL
+            }
+        }
+    }
+    
+    
+}
+
+extension Article: Encodable{
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        try container.encode(self.title, forKey: .title)
+        try container.encodeIfPresent(self.summary, forKey: .summary)
+        try container.encodeIfPresent(self.image, forKey: .image)
+        try container.encode(self.link, forKey: .link)
+        try container.encode(self.createdDate.toIso8601(), forKey: .createdDate)
     }
 }
 
-class Article: Codable {
-    
-    var title:String
-    var summary:String?
-    var link:URL
-    var imageURL:URL?
-    //var tags:[String]?
-    var id:UUID
-    
-    init(withTitle title:String, andLink link: URL) {
-        self.id = UUID()
-        self.link = link
-        self.title = title
-    }
-    
-    
-    
-    init() {
-        self.id = UUID()
-        self.link = URL(string: "http://localhost:3030")!
-        self.title = "Title"
-    }
+extension CodingUserInfoKey {
+    static let context = CodingUserInfoKey(rawValue: "context")
 }
