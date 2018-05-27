@@ -19,12 +19,14 @@ class FeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        //let article = Article(entity: <#T##NSEntityDescription#>, insertInto: <#T##NSManagedObjectContext?#>)
+        
         self.initView()
         
         self.bindingViewModel()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+
     
     func initView(){
         //Initializing view with placeholder / loader

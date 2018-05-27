@@ -17,6 +17,7 @@
 		92543EA0201B54EB00AB6B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92543E9E201B54EB00AB6B22 /* LaunchScreen.storyboard */; };
 		92543EAB201B54EB00AB6B22 /* VeilleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543EAA201B54EB00AB6B22 /* VeilleTests.swift */; };
 		92939179209A36FD00F2E99C /* mockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92939178209A36FD00F2E99C /* mockData.plist */; };
+		92A436DB20B9B1F300CF8855 /* CoreDataDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A436DA20B9B1F300CF8855 /* CoreDataDecodable.swift */; };
 		92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92C4B3D1201B5EFE00483521 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
 		92C4B3E2201C9EDE00483521 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3E1201C9EDE00483521 /* APIService.swift */; };
@@ -35,12 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9206CA41209FA5F900399BA5 /* PBXContainerItemProxy */ = {
+		92B07EA220B06C9E00FF8936 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 92543E88201B54EA00AB6B22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 9206CA38209FA5F900399BA5;
-			remoteInfo = webSharing;
+			remoteGlobalIDString = 92543E8F201B54EA00AB6B22;
+			remoteInfo = Veille;
 		};
 		92DE79BD20A49A56002E73F4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -82,6 +83,7 @@
 		927729A4209F9E8C009A822E /* GetPageMetaData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetPageMetaData.js; sourceTree = "<group>"; };
 		927729A6209FA351009A822E /* GetUrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetUrl.js; sourceTree = "<group>"; };
 		92939178209A36FD00F2E99C /* mockData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mockData.plist; sourceTree = "<group>"; };
+		92A436DA20B9B1F300CF8855 /* CoreDataDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataDecodable.swift; sourceTree = "<group>"; };
 		92C4B3CE201B587200483521 /* Veille.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Veille.xcdatamodel; sourceTree = "<group>"; };
 		92C4B3D0201B5EFE00483521 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		92C4B3E1201C9EDE00483521 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -100,13 +102,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9206CA36209FA5F900399BA5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		92543E8D201B54EA00AB6B22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -180,6 +175,7 @@
 				92C4B3D0201B5EFE00483521 /* Article.swift */,
 				92C4B3E7201CB62C00483521 /* Tag.swift */,
 				92EE65C320A4B78E00B0AD18 /* CoreDataStack.swift */,
+				92A436DA20B9B1F300CF8855 /* CoreDataDecodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -244,23 +240,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9206CA38209FA5F900399BA5 /* webSharing */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9206CA46209FA5F900399BA5 /* Build configuration list for PBXNativeTarget "webSharing" */;
-			buildPhases = (
-				9206CA35209FA5F900399BA5 /* Sources */,
-				9206CA36209FA5F900399BA5 /* Frameworks */,
-				9206CA37209FA5F900399BA5 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = webSharing;
-			productName = webSharing;
-			productReference = 9206CA39209FA5F900399BA5 /* webSharing.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		92543E8F201B54EA00AB6B22 /* Veille */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92543EAF201B54EB00AB6B22 /* Build configuration list for PBXNativeTarget "Veille" */;
@@ -285,8 +264,6 @@
 			buildConfigurationList = 92543EB2201B54EB00AB6B22 /* Build configuration list for PBXNativeTarget "VeilleTests" */;
 			buildPhases = (
 				92543EA2201B54EB00AB6B22 /* Sources */,
-				92543EA3201B54EB00AB6B22 /* Frameworks */,
-				92543EA4201B54EB00AB6B22 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -325,15 +302,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Anthony Da Cruz";
 				TargetAttributes = {
-					9206CA38209FA5F900399BA5 = {
-						CreatedOnToolsVersion = 9.3;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 1;
-							};
-						};
-					};
 					92543E8F201B54EA00AB6B22 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -380,16 +348,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9206CA37209FA5F900399BA5 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9206CA3F209FA5F900399BA5 /* MainInterface.storyboard in Resources */,
-				9206CA47209FA60800399BA5 /* GetPageMetaData.js in Resources */,
-				9206CA48209FA60800399BA5 /* GetUrl.js in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		92543E8E201B54EA00AB6B22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,6 +386,7 @@
 				92C4B3E2201C9EDE00483521 /* APIService.swift in Sources */,
 				9236E1C8202717E200136F74 /* DetailNewsViewModel.swift in Sources */,
 				92EE65C620A4C1D400B0AD18 /* Extension+Date.swift in Sources */,
+				92A436DB20B9B1F300CF8855 /* CoreDataDecodable.swift in Sources */,
 				92C4B3E8201CB62C00483521 /* Tag.swift in Sources */,
 				92C4B3D1201B5EFE00483521 /* Article.swift in Sources */,
 				92EE65C120A4B23000B0AD18 /* ContainerViewController.swift in Sources */,
@@ -455,15 +414,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9206CA42209FA5F900399BA5 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9206CA38209FA5F900399BA5 /* webSharing */;
-			targetProxy = 9206CA41209FA5F900399BA5 /* PBXContainerItemProxy */;
-		};
 		92543EA8201B54EB00AB6B22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 92543E8F201B54EA00AB6B22 /* Veille */;
-			targetProxy = 92543EA7201B54EB00AB6B22 /* PBXContainerItemProxy */;
+			targetProxy = 92B07EA220B06C9E00FF8936 /* PBXContainerItemProxy */;
 		};
 		92DE79BE20A49A56002E73F4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -473,14 +427,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9206CA3D209FA5F900399BA5 /* MainInterface.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9206CA3E209FA5F900399BA5 /* Base */,
-			);
-			name = MainInterface.storyboard;
-			sourceTree = "<group>";
-		};
 		92543E99201B54EB00AB6B22 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -508,46 +454,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		9206CA44209FA5F900399BA5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = webSharing/webSharing.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YFZ9A994PW;
-				INFOPLIST_FILE = webSharing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anthony.Veille.webSharing;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		9206CA45209FA5F900399BA5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = YES;
-				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
-				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
-				CODE_SIGN_ENTITLEMENTS = webSharing/webSharing.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = YFZ9A994PW;
-				INFOPLIST_FILE = webSharing/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.anthony.Veille.webSharing;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
 		92543EAD201B54EB00AB6B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -768,15 +674,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9206CA46209FA5F900399BA5 /* Build configuration list for PBXNativeTarget "webSharing" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9206CA44209FA5F900399BA5 /* Debug */,
-				9206CA45209FA5F900399BA5 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		92543E8B201B54EA00AB6B22 /* Build configuration list for PBXProject "Veille" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

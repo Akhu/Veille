@@ -17,7 +17,6 @@ class Article: NSManagedObject, Decodable {
     @NSManaged var image:URL?
     @NSManaged var createdDate: Date
     //var tags:[String]?
-    @NSManaged var id:UUID
 
     enum CodingKeys: String, CodingKey {
         case title
@@ -32,13 +31,12 @@ class Article: NSManagedObject, Decodable {
         guard let contextUserInfoKey = CodingUserInfoKey.context else { fatalError("cannot find context key") }
 
         guard let managedObjectContext = decoder.userInfo[contextUserInfoKey] as? NSManagedObjectContext else { fatalError("cannot Retrieve context") }
-
+        
         guard let entity = NSEntityDescription.entity(forEntityName: "Article", in: managedObjectContext) else { fatalError() }
 
         self.init(entity: entity, insertInto: nil)
-
+        
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        self.id = UUID()
         self.createdDate = Date()
         self.title = try values.decode(String.self, forKey: .title)
 
@@ -54,9 +52,8 @@ class Article: NSManagedObject, Decodable {
                 self.image = imageURL
             }
         }
+        print(self.image)
     }
-
-
 }
 
 extension Article: Encodable{

@@ -42,14 +42,26 @@ class APIService {
             do {
                 let data = try Data(contentsOf: url)
                 print(String(bytes: data, encoding: .utf8))
-                let context = CoreDataStack.store.persistentContainer.newBackgroundContext()
+                let context = CoreDataStack.store.persistentContainer.viewContext
+            
                 let plistDecoderForArticle = PropertyListDecoder()
-                plistDecoderForArticle.userInfo[CodingUserInfoKey.context!] = context
+                plistDecoderForArticle.userInfo[CodingUserInfoKey.context!] = context // I was there => https://stackoverflow.com/questions/44450114/how-to-use-swift-4-codable-in-core-data/46917019#comment87905193_46917019
+                
                 let decodedData = try plistDecoderForArticle.decode([Article].self, from: data)
 //                for article in decodedData {
 //                    CoreDataStack.store.persistArticle(article: article)
 //                }
-                CoreDataStack.store.saveContext()
+                
+                context.perform {
+                    do {
+                        print("Context changes ? : \(context.hasChanges)")
+                        try context.save()
+                        
+                    } catch let error as NSError {
+                        print(error)
+                    }
+                }
+                
                 completion(decodedData)
             } catch let error as NSError {
                 print(error.description)

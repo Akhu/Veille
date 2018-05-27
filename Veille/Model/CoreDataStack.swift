@@ -17,8 +17,7 @@ final class CoreDataStack {
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-    
-    var fetchedArticles = [Article]()
+
     
     func delete(article: Article){
         
@@ -33,19 +32,20 @@ final class CoreDataStack {
         }
     }
     
-    func fetchArticlesFromCoreData() {
+    func fetchArticlesFromCoreData() -> [Article]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Article")
         let dateSorting = NSSortDescriptor(key: "createdDate", ascending: false)
         fetchRequest.sortDescriptors = [dateSorting]
         CustomPersistentContainer.listFileInSharedFolder()
         do {
             if let result = try context.fetch(fetchRequest)  as? [Article] {
-                self.fetchedArticles = result
+                return result
             }
         } catch let error as NSError {
             print("fetchArticle from CoreData \(error.description)")
+            return nil
         }
-        
+        return nil
     }
     
     lazy var persistentContainer: CustomPersistentContainer = {

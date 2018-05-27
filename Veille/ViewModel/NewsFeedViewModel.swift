@@ -39,9 +39,9 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol {
             print(dataReceived)
         }
 
-        CoreDataStack.store.fetchArticlesFromCoreData()
+        //CoreDataStack.store.fetchArticlesFromCoreData()
 
-        completion(CoreDataStack.store.fetchedArticles)
+        completion(CoreDataStack.store.fetchArticlesFromCoreData())
 
 
     }
