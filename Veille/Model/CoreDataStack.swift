@@ -32,6 +32,26 @@ final class CoreDataStack {
         }
     }
     
+    func fetchArticleBy(id: Int32) -> Article? {
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Article")
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        
+        do {
+            if let fetchArticle = try self.context.fetch(fetchRequest) as? [Article] {
+                guard fetchArticle.count <= 1 else { fatalError("An article ID must be unique, multiple match found !!!") }
+                
+                guard let article = fetchArticle.first else { return nil }
+                
+                return article
+            }
+            return nil
+        } catch let error as NSError {
+            print(error.debugDescription)
+        }
+        
+        return nil
+    }
+    
     func fetchArticlesFromCoreData() -> [Article]? {
         let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Article")
         let dateSorting = NSSortDescriptor(key: "createdDate", ascending: false)
