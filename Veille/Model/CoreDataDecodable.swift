@@ -13,7 +13,7 @@ protocol CoreDataDecodable: Decodable {
     associatedtype DTO: Decodable
     
     @discardableResult
-    static func findOrCreate(for dto: DTO, in context: NSManagedObjectContext) throws -> Self
+    //static func findOrCreate(for dto: DTO, in context: NSManagedObjectContext) throws -> Self
     
     init(with dto: DTO, in context: NSManagedObjectContext) throws
     

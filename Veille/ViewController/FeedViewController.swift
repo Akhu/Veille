@@ -18,9 +18,6 @@ class FeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
-        self.initView()
         
         self.bindingViewModel()
         // Do any additional setup after loading the view, typically from a nib.
@@ -37,11 +34,7 @@ class FeedViewController: UIViewController {
     }
     
     func bindingViewModel(){
-        self.newsFeedVM.dataFetched = { [weak self] in
-            DispatchQueue.main.async {
-                self?.tableView.reloadData()
-            }
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,20 +45,5 @@ class FeedViewController: UIViewController {
     func updateUI() {
         
     }
-}
-
-extension FeedViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.newsFeedVM.articles.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return self.newsFeedVM.dataSource[indexPath.row]
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
-    
 }
 

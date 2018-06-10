@@ -39,22 +39,18 @@ class Article: NSManagedObject, Encodable {
     
 }
 
+
+// MARK: Querying
+
+extension Article: Managed {
+    static var defaultSortDescriptors: [NSSortDescriptor] {
+        return [NSSortDescriptor(key: #keyPath(createdDate), ascending: false)]
+    }
+}
+
 extension Article: CoreDataDecodable{
     static func findOrCreate(for dto: Article.DTO, in context: NSManagedObjectContext) throws -> Self {
-        return existingArticle(type: self)
-        //
-        if var article = CoreDataStack.store.fetchArticleBy(id: dto.id) {
-            do {
-                try article.update(from: dto)
-                
-            } catch let error as NSError {
-                print(error.debugDescription)
-            }
-        }
-    }
-    
-    private class func existingArticle<T>(type: T.Type) -> T {
-        //
+        return self.init()
     }
     
     func update(from dto: Article.DTO) throws {
