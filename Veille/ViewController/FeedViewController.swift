@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
-class FeedViewController: UIViewController {
+class FeedViewController: UIViewController, FirebaseRealtimeDBAware {
 
     @IBOutlet weak var tableView: UITableView!
+    
+    let ref = Database.database().reference(withPath: "veille")
+    let articlesRef = Database.database().reference(withPath: "veille/articles")
     
     lazy var newsFeedVM:NewsFeedViewModelProtocol = {
         return NewsFeedViewModel()
@@ -20,6 +25,10 @@ class FeedViewController: UIViewController {
         super.viewDidLoad()
         
         self.bindingViewModel()
+        
+        ref.observe(.value, with: { snapshot in
+            print(snapshot.value as Any)
+        })
         // Do any additional setup after loading the view, typically from a nib.
     }
     

@@ -9,6 +9,6 @@
 import Foundation
 import CoreData
 
-protocol CoreDataAware {
-    var managedObjectContext: NSManagedObjectContext! { get set }
+protocol FirebaseRealtimeDBAware {
+    //var veilleDBRef: Database! { get set }
 }

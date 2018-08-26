@@ -1,4 +1,5 @@
 PODS:
+  - CodableFirebase (0.2.0)
   - Firebase/Core (5.6.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 5.1.1)
@@ -54,11 +55,13 @@ PODS:
   - nanopb/encode (0.3.8)
 
 DEPENDENCIES:
+  - CodableFirebase
   - Firebase/Core
   - Firebase/Database
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - CodableFirebase
     - Firebase
     - FirebaseAnalytics
     - FirebaseCore
@@ -70,6 +73,7 @@ SPEC REPOS:
     - nanopb
 
 SPEC CHECKSUMS:
+  CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
   Firebase: 75ea9e232eefa158c1049028030b8f661a2ccb62
   FirebaseAnalytics: 993577e91157feb40945abedd6ab346d8a4b6ac8
   FirebaseCore: cb9ee75e0894def766167c95a4d5a14b1c138269
@@ -80,6 +84,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: fff60eb22f2899724cc5032ae87843806b854859
+PODFILE CHECKSUM: 4205210a625c4e83ee687ea590ec9716600a5d3b
 
 COCOAPODS: 1.5.3

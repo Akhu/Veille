@@ -13,7 +13,7 @@
 		9220CAA020CD9F2A00EF9BE8 /* DesignTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */; };
 		9220CAA320CDA0A100EF9BE8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAA220CDA0A100EF9BE8 /* RootViewController.swift */; };
 		9220CAA720CDA19500EF9BE8 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAA620CDA19500EF9BE8 /* ArticleTableViewCell.swift */; };
-		9220CAAA20CDA25900EF9BE8 /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAA920CDA25900EF9BE8 /* CoreData.swift */; };
+		9220CAAA20CDA25900EF9BE8 /* FirebaseDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAA920CDA25900EF9BE8 /* FirebaseDB.swift */; };
 		9220CAAE20CDA3B000EF9BE8 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAAD20CDA3AF00EF9BE8 /* UIImageColors.swift */; };
 		9220CAB020CDA3B700EF9BE8 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */; };
 		9220CAB220CDA3BF00EF9BE8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */; };
@@ -29,7 +29,10 @@
 		92543EA0201B54EB00AB6B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92543E9E201B54EB00AB6B22 /* LaunchScreen.storyboard */; };
 		92543EAB201B54EB00AB6B22 /* VeilleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543EAA201B54EB00AB6B22 /* VeilleTests.swift */; };
 		928A4B9C2132E46F006EE1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928A4B9B2132E46F006EE1C0 /* GoogleService-Info.plist */; };
-		928A4B9D2132E46F006EE1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928A4B9B2132E46F006EE1C0 /* GoogleService-Info.plist */; };
+		928A4B9F2132E9BD006EE1C0 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */; };
+		928A4BA221331985006EE1C0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
+		928A4BA321331A6A006EE1C0 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */; };
+		928A4BA521332F9E006EE1C0 /* GoogleService-Info-share.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */; };
 		92939179209A36FD00F2E99C /* mockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92939178209A36FD00F2E99C /* mockData.plist */; };
 		92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92C4B3D1201B5EFE00483521 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
@@ -87,7 +90,7 @@
 		9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTools.swift; sourceTree = "<group>"; };
 		9220CAA220CDA0A100EF9BE8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		9220CAA620CDA19500EF9BE8 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
-		9220CAA920CDA25900EF9BE8 /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		9220CAA920CDA25900EF9BE8 /* FirebaseDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseDB.swift; sourceTree = "<group>"; };
 		9220CAAD20CDA3AF00EF9BE8 /* UIImageColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -109,6 +112,8 @@
 		927729A4209F9E8C009A822E /* GetPageMetaData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetPageMetaData.js; sourceTree = "<group>"; };
 		927729A6209FA351009A822E /* GetUrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetUrl.js; sourceTree = "<group>"; };
 		928A4B9B2132E46F006EE1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
+		928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-share.plist"; sourceTree = "<group>"; };
 		92939178209A36FD00F2E99C /* mockData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mockData.plist; sourceTree = "<group>"; };
 		92C4B3CE201B587200483521 /* Veille.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Veille.xcdatamodel; sourceTree = "<group>"; };
 		92C4B3D0201B5EFE00483521 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -195,7 +200,7 @@
 		9220CAA820CDA25000EF9BE8 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				9220CAA920CDA25900EF9BE8 /* CoreData.swift */,
+				9220CAA920CDA25900EF9BE8 /* FirebaseDB.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 			isa = PBXGroup;
 			children = (
 				9247E88F20D9A80800340C18 /* Resources */,
+				928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -328,6 +334,7 @@
 		92DE79B620A49A56002E73F4 /* WebPageSharing */ = {
 			isa = PBXGroup;
 			children = (
+				928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */,
 				92DE79C520A4A96D002E73F4 /* WebPageSharing.entitlements */,
 				92DE79B720A49A56002E73F4 /* ShareViewController.swift */,
 				92DE79B920A49A56002E73F4 /* MainInterface.storyboard */,
@@ -470,10 +477,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				928A4B9D2132E46F006EE1C0 /* GoogleService-Info.plist in Resources */,
 				92DE79BB20A49A56002E73F4 /* MainInterface.storyboard in Resources */,
 				92DE79C320A49A7C002E73F4 /* GetPageMetaData.js in Resources */,
 				92DE79C420A49A7C002E73F4 /* GetUrl.js in Resources */,
+				928A4BA521332F9E006EE1C0 /* GoogleService-Info-share.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,12 +530,14 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Veille/Pods-Veille-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -570,9 +579,10 @@
 				9247E89120D9A81E00340C18 /* ArticleDTO.swift in Sources */,
 				92543E94201B54EA00AB6B22 /* AppDelegate.swift in Sources */,
 				9236E1C6202717D700136F74 /* DetailNewsViewModelProtocol.swift in Sources */,
+				928A4B9F2132E9BD006EE1C0 /* FirebaseHandler.swift in Sources */,
 				9220CAB220CDA3BF00EF9BE8 /* Utilities.swift in Sources */,
 				9220CAB020CDA3B700EF9BE8 /* SegueHandler.swift in Sources */,
-				9220CAAA20CDA25900EF9BE8 /* CoreData.swift in Sources */,
+				9220CAAA20CDA25900EF9BE8 /* FirebaseDB.swift in Sources */,
 				92C4B3E4201CB4C600483521 /* NewsFeedViewModelProtocol.swift in Sources */,
 				92543E96201B54EB00AB6B22 /* FeedViewController.swift in Sources */,
 				9220CAB420CDA3CC00EF9BE8 /* DateExtension.swift in Sources */,
@@ -601,6 +611,8 @@
 			files = (
 				92EE65C220A4B70100B0AD18 /* Veille.xcdatamodeld in Sources */,
 				92DE79B820A49A56002E73F4 /* ShareViewController.swift in Sources */,
+				928A4BA221331985006EE1C0 /* Article.swift in Sources */,
+				928A4BA321331A6A006EE1C0 /* FirebaseHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

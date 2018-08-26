@@ -10,8 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol, CoreDataAware {
-    var managedObjectContext: NSManagedObjectContext!
+class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol{
     
     
     override init() {
@@ -31,26 +30,6 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol, CoreDataAware {
        
     }
 
-    //should implement NewsFeedProtocol and ViewModelTableViewProtocol
-    //var dataFetched: (() -> ())?
-
-    //var articles: [Article] = [Article]()
-
-    //@Todo => if network is unavailable -> CoreData
-    /**
-     Fetching data from server and return this newsFeedViewModel as instance with all our articles loaded and ready
-     */
-//    func fetchData(_ completion: @escaping (([Article]?) -> Void)){
-//        APIService().fetchArticles { (dataReceived) in
-//            print(dataReceived)
-//        }
-//
-//        //CoreDataStack.store.fetchArticlesFromCoreData()
-//
-//        completion(CoreDataStack.store.fetchArticlesFromCoreData())
-//
-//
-//    }
 
     func addArticle() {
 //        let articleMockList = APIService().returnArticlesFromMock()

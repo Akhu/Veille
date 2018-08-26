@@ -13,13 +13,18 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
     
         FirebaseApp.configure()
         
+        let ref = Database.database().reference(withPath: "veille")
+        
+        
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
-
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             
         guard let rootViewController = storyBoard.instantiateInitialViewController() as? RootViewController else { fatalError( "Wrong root view controller type"  )}
