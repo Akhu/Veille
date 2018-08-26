@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class RootViewController: UIViewController, CoreDataAware, SegueHandler {
+class RootViewController: UIViewController, SegueHandler {
     
     enum SegueIdentifier: String {
         case childViewController = "newsFeed"
@@ -20,19 +20,8 @@ class RootViewController: UIViewController, CoreDataAware, SegueHandler {
         return NewsFeedViewModel()
     }()
     
-    var managedObjectContext: NSManagedObjectContext!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        PostsApi.posts.addObserver(owner: self) { [weak self] (posts, event) in
-            print(posts)
-        }
-        
-        PostsApi.posts.loadIfNeeded()?.onFailure({ (error) in
-            print(error.cause)
-        })
-        
        
     }
     
@@ -44,7 +33,7 @@ class RootViewController: UIViewController, CoreDataAware, SegueHandler {
         switch segueIdentifier(for: segue) {
         case .childViewController:
             guard let childVc = segue.destination as? NewsFeedTableViewController else { fatalError("Wrong view controller type") }
-            childVc.managedObjectContext = self.managedObjectContext
+            
             break
         }
     }

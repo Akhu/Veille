@@ -10,10 +10,9 @@ import Foundation
 import UIKit
 import CoreData
 
-class NewsFeedTableViewController: UITableViewController, CoreDataAware {
-    var managedObjectContext: NSManagedObjectContext!
+class NewsFeedTableViewController: UITableViewController {
     
-    var dataSource:TableViewDataSource<NewsFeedTableViewController>!
+    //var dataSource:TableViewDataSource<NewsFeedTableViewController>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +25,7 @@ class NewsFeedTableViewController: UITableViewController, CoreDataAware {
     
 }
 
-extension NewsFeedTableViewController: TableViewDataSourceDelegate {
+extension NewsFeedTableViewController {
     func configure(_ cell: ArticleTableViewCell, for object: Article) {
         cell.configure(for: object)
     }

@@ -24,14 +24,11 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol, CoreDataAware {
 
     
     func observers() {
-        PostsApi.posts.addObserver(owner: self) { (postsReceived, event) in
-            print(postsReceived)
-            
-        }
+       
     }
     
     func refresh() {
-        PostsApi.posts.loadIfNeeded()
+       
     }
 
     //should implement NewsFeedProtocol and ViewModelTableViewProtocol

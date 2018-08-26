@@ -9,23 +9,17 @@
 import Foundation
 import CoreData
 
-class Article: NSManagedObject, Encodable {
+class Article: Codable {
 
-    @NSManaged var title:String!
-    @NSManaged var summary:String?
-    @NSManaged var link:URL!
-    @NSManaged var image:URL?
-    @NSManaged var createdDate: Date
-    @NSManaged var id: Int32
+    var title:String!
+    var summary:String?
+    var link:URL!
+    var image:URL?
+    var createdDate: Date
+    var id: Int32
     //var tags:[String]?
     
 }
 
 
 // MARK: Querying
-
-extension Article: Managed {
-    static var defaultSortDescriptors: [NSSortDescriptor] {
-        return [NSSortDescriptor(key: #keyPath(createdDate), ascending: false)]
-    }
-}

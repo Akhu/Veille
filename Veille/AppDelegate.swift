@@ -7,30 +7,25 @@
 //
 
 import UIKit
-import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var persistentContainer: NSPersistentContainer!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+        FirebaseApp.configure()
         
-        // Override point for customization after application launch.
-        CoreDataStack.createVeilleContainer { (container) in
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.persistentContainer = container
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        guard let rootViewController = storyBoard.instantiateInitialViewController() as? RootViewController else { fatalError( "Wrong root view controller type"  )}
             
-            guard let rootViewController = storyBoard.instantiateInitialViewController() as? RootViewController else { fatalError( "Wrong root view controller type"  )}
-            
-            rootViewController.managedObjectContext = container.viewContext
-            
-            self.window?.rootViewController = rootViewController
-            self.window?.makeKeyAndVisible()
-        }
+        self.window?.rootViewController = rootViewController
+        self.window?.makeKeyAndVisible()
         
         return true
     }
