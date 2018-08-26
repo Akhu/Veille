@@ -16,13 +16,28 @@ class RootViewController: UIViewController, CoreDataAware, SegueHandler {
         case childViewController = "newsFeed"
     }
     
+    lazy var newsFeedVM:NewsFeedViewModelProtocol = {
+        return NewsFeedViewModel()
+    }()
+    
     var managedObjectContext: NSManagedObjectContext!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        PostsApi.posts.addObserver(owner: self) { [weak self] (posts, event) in
+            print(posts)
+        }
         
+        PostsApi.posts.loadIfNeeded()?.onFailure({ (error) in
+            print(error.cause)
+        })
+        
+       
     }
+    
+    
+    
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

@@ -16,17 +16,22 @@ class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol, CoreDataAware {
     
     override init() {
         super.init()
+        
+        self.observers()
+        
         self.refresh()
     }
 
+    
+    func observers() {
+        PostsApi.posts.addObserver(owner: self) { (postsReceived, event) in
+            print(postsReceived)
+            
+        }
+    }
+    
     func refresh() {
-//        self.fetchData { [weak self] articles in
-//            if let receivedArticles = articles {
-//                self?.processFetchedArticles(articles: receivedArticles)
-//            }else {
-//                print("Error while fetching articles") //Replace with try?
-//            }
-//        }
+        PostsApi.posts.loadIfNeeded()
     }
 
     //should implement NewsFeedProtocol and ViewModelTableViewProtocol

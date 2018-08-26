@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		789D24F88F28BD26A047AE45 /* Pods_WebPageSharing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF858273C297E13D7100E6B /* Pods_WebPageSharing.framework */; };
+		81D3FAB863EF260F6AA93326 /* Pods_Veille.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D16378E143E682B5E9ABA1C3 /* Pods_Veille.framework */; };
 		9220CA9C20CD99F900EF9BE8 /* NewsFeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9B20CD99F900EF9BE8 /* NewsFeedTableViewController.swift */; };
 		9220CA9E20CD9B0900EF9BE8 /* Managed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9D20CD9B0900EF9BE8 /* Managed.swift */; };
 		9220CAA020CD9F2A00EF9BE8 /* DesignTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */; };
@@ -21,6 +23,8 @@
 		9220CAB420CDA3CC00EF9BE8 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAB320CDA3CC00EF9BE8 /* DateExtension.swift */; };
 		9236E1C6202717D700136F74 /* DetailNewsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236E1C5202717D700136F74 /* DetailNewsViewModelProtocol.swift */; };
 		9236E1C8202717E200136F74 /* DetailNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */; };
+		9247E89120D9A81E00340C18 /* ArticleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247E89020D9A81E00340C18 /* ArticleDTO.swift */; };
+		9247E89420DA2A3B00340C18 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247E89320DA2A3B00340C18 /* UserDTO.swift */; };
 		92543E94201B54EA00AB6B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543E93201B54EA00AB6B22 /* AppDelegate.swift */; };
 		92543E96201B54EB00AB6B22 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543E95201B54EB00AB6B22 /* FeedViewController.swift */; };
 		92543E9B201B54EB00AB6B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92543E99201B54EB00AB6B22 /* Main.storyboard */; };
@@ -43,6 +47,7 @@
 		92EE65C220A4B70100B0AD18 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92EE65C420A4B78E00B0AD18 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE65C320A4B78E00B0AD18 /* CoreDataStack.swift */; };
 		92EE65C620A4C1D400B0AD18 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE65C520A4C1D400B0AD18 /* Extension+Date.swift */; };
+		CB290D7DDBDDFC95B6BE2AA2 /* Pods_VeilleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C327DE7555A79B80A37C7FEF /* Pods_VeilleTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +82,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0498C5E6D965EE0FE4127D4A /* Pods-VeilleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeilleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VeilleTests/Pods-VeilleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		131D61B5664BB6DFBC76E436 /* Pods-WebPageSharing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebPageSharing.release.xcconfig"; path = "Pods/Target Support Files/Pods-WebPageSharing/Pods-WebPageSharing.release.xcconfig"; sourceTree = "<group>"; };
+		270B2D1575CED6B19922F390 /* Pods-WebPageSharing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WebPageSharing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WebPageSharing/Pods-WebPageSharing.debug.xcconfig"; sourceTree = "<group>"; };
+		28A4901900B15EC5EC9E7ADA /* Pods-Veille.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Veille.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Veille/Pods-Veille.debug.xcconfig"; sourceTree = "<group>"; };
+		8AF858273C297E13D7100E6B /* Pods_WebPageSharing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebPageSharing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9220CA9B20CD99F900EF9BE8 /* NewsFeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedTableViewController.swift; sourceTree = "<group>"; };
 		9220CA9D20CD9B0900EF9BE8 /* Managed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Managed.swift; sourceTree = "<group>"; };
 		9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignTools.swift; sourceTree = "<group>"; };
@@ -91,6 +101,8 @@
 		9220CAB320CDA3CC00EF9BE8 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		9236E1C5202717D700136F74 /* DetailNewsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewModelProtocol.swift; sourceTree = "<group>"; };
 		9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewModel.swift; sourceTree = "<group>"; };
+		9247E89020D9A81E00340C18 /* ArticleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDTO.swift; sourceTree = "<group>"; };
+		9247E89320DA2A3B00340C18 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
 		92543E90201B54EA00AB6B22 /* Veille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92543E93201B54EA00AB6B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92543E95201B54EB00AB6B22 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
@@ -119,13 +131,26 @@
 		92DE79C520A4A96D002E73F4 /* WebPageSharing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WebPageSharing.entitlements; sourceTree = "<group>"; };
 		92EE65C320A4B78E00B0AD18 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		92EE65C520A4C1D400B0AD18 /* Extension+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Date.swift"; sourceTree = "<group>"; };
+		BC00F4E1F423553E43071801 /* Pods-VeilleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VeilleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-VeilleTests/Pods-VeilleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C327DE7555A79B80A37C7FEF /* Pods_VeilleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VeilleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16378E143E682B5E9ABA1C3 /* Pods_Veille.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Veille.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E97FA588B095A3BF9666D8E2 /* Pods-Veille.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Veille.release.xcconfig"; path = "Pods/Target Support Files/Pods-Veille/Pods-Veille.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1583CECBD0D6C8B1703D7D5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB290D7DDBDDFC95B6BE2AA2 /* Pods_VeilleTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		92543E8D201B54EA00AB6B22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D3FAB863EF260F6AA93326 /* Pods_Veille.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,22 +158,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				789D24F88F28BD26A047AE45 /* Pods_WebPageSharing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9220CAA120CD9F3400EF9BE8 /* Utilities */ = {
+		745E00532551ADF3374B110B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D16378E143E682B5E9ABA1C3 /* Pods_Veille.framework */,
+				C327DE7555A79B80A37C7FEF /* Pods_VeilleTests.framework */,
+				8AF858273C297E13D7100E6B /* Pods_WebPageSharing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		89C5FCCBA3309DDCF484FD78 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				28A4901900B15EC5EC9E7ADA /* Pods-Veille.debug.xcconfig */,
+				E97FA588B095A3BF9666D8E2 /* Pods-Veille.release.xcconfig */,
+				0498C5E6D965EE0FE4127D4A /* Pods-VeilleTests.debug.xcconfig */,
+				BC00F4E1F423553E43071801 /* Pods-VeilleTests.release.xcconfig */,
+				270B2D1575CED6B19922F390 /* Pods-WebPageSharing.debug.xcconfig */,
+				131D61B5664BB6DFBC76E436 /* Pods-WebPageSharing.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9220CAA120CD9F3400EF9BE8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				92C4B3E0201C9C8D00483521 /* Extension */,
 				9220CAB320CDA3CC00EF9BE8 /* DateExtension.swift */,
 				9220CAAD20CDA3AF00EF9BE8 /* UIImageColors.swift */,
 				9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */,
 				9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */,
 				9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */,
 			);
-			path = Utilities;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		9220CAA820CDA25000EF9BE8 /* Protocols */ = {
@@ -159,13 +209,32 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		9247E88F20D9A80800340C18 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9247E89020D9A81E00340C18 /* ArticleDTO.swift */,
+				9247E89320DA2A3B00340C18 /* UserDTO.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		9247E89220D9A87300340C18 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9220CAA620CDA19500EF9BE8 /* ArticleTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		92543E87201B54EA00AB6B22 = {
 			isa = PBXGroup;
 			children = (
 				92543E92201B54EA00AB6B22 /* Veille */,
-				92543EA9201B54EB00AB6B22 /* VeilleTests */,
 				92DE79B620A49A56002E73F4 /* WebPageSharing */,
+				92543EA9201B54EB00AB6B22 /* VeilleTests */,
 				92543E91201B54EA00AB6B22 /* Products */,
+				89C5FCCBA3309DDCF484FD78 /* Pods */,
+				745E00532551ADF3374B110B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,19 +251,15 @@
 		92543E92201B54EA00AB6B22 /* Veille */ = {
 			isa = PBXGroup;
 			children = (
-				92DE79AF20A496D5002E73F4 /* Veille.entitlements */,
-				92C4B3E0201C9C8D00483521 /* Extensions */,
-				92C4B3DF201C9C8800483521 /* Services */,
-				92C4B3EB201F4D3400483521 /* View */,
+				92C4B3DF201C9C8800483521 /* Network */,
 				92C4B3DE201C9C7800483521 /* ViewController */,
-				92C4B3DD201C9C7300483521 /* ViewModel */,
+				92C4B3DD201C9C7300483521 /* DataSource */,
 				92C4B3DC201C9C6E00483521 /* Model */,
+				92C4B3EB201F4D3400483521 /* UIComponent */,
+				9220CAA120CD9F3400EF9BE8 /* Utils */,
 				92543E93201B54EA00AB6B22 /* AppDelegate.swift */,
-				92543E99201B54EB00AB6B22 /* Main.storyboard */,
-				92543E9C201B54EB00AB6B22 /* Assets.xcassets */,
-				92543E9E201B54EB00AB6B22 /* LaunchScreen.storyboard */,
 				92543EA1201B54EB00AB6B22 /* Info.plist */,
-				9220CAA120CD9F3400EF9BE8 /* Utilities */,
+				92DE79AF20A496D5002E73F4 /* Veille.entitlements */,
 			);
 			path = Veille;
 			sourceTree = "<group>";
@@ -224,7 +289,7 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		92C4B3DD201C9C7300483521 /* ViewModel */ = {
+		92C4B3DD201C9C7300483521 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				92C4B3E3201CB4C600483521 /* NewsFeedViewModelProtocol.swift */,
@@ -233,7 +298,7 @@
 				9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */,
 				9220CAA420CDA15900EF9BE8 /* TableViewDataSource.swift */,
 			);
-			path = ViewModel;
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		92C4B3DE201C9C7800483521 /* ViewController */ = {
@@ -246,28 +311,32 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		92C4B3DF201C9C8800483521 /* Services */ = {
+		92C4B3DF201C9C8800483521 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				9247E88F20D9A80800340C18 /* Resources */,
 				92C4B3E1201C9EDE00483521 /* APIService.swift */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
-		92C4B3E0201C9C8D00483521 /* Extensions */ = {
+		92C4B3E0201C9C8D00483521 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				92EE65C520A4C1D400B0AD18 /* Extension+Date.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		92C4B3EB201F4D3400483521 /* View */ = {
+		92C4B3EB201F4D3400483521 /* UIComponent */ = {
 			isa = PBXGroup;
 			children = (
-				9220CAA620CDA19500EF9BE8 /* ArticleTableViewCell.swift */,
+				92543E9E201B54EB00AB6B22 /* LaunchScreen.storyboard */,
+				92543E99201B54EB00AB6B22 /* Main.storyboard */,
+				92543E9C201B54EB00AB6B22 /* Assets.xcassets */,
+				9247E89220D9A87300340C18 /* Cell */,
 			);
-			path = View;
+			path = UIComponent;
 			sourceTree = "<group>";
 		};
 		92DE79B620A49A56002E73F4 /* WebPageSharing */ = {
@@ -290,10 +359,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92543EAF201B54EB00AB6B22 /* Build configuration list for PBXNativeTarget "Veille" */;
 			buildPhases = (
+				91A80DBD88EA9D98715CF307 /* [CP] Check Pods Manifest.lock */,
 				92543E8C201B54EA00AB6B22 /* Sources */,
 				92543E8D201B54EA00AB6B22 /* Frameworks */,
 				92543E8E201B54EA00AB6B22 /* Resources */,
 				92543EC7201B550B00AB6B22 /* Embed App Extensions */,
+				B33C922FA8473EF69C8568D6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +380,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92543EB2201B54EB00AB6B22 /* Build configuration list for PBXNativeTarget "VeilleTests" */;
 			buildPhases = (
+				7C1414613ACBB991ABBE090C /* [CP] Check Pods Manifest.lock */,
 				92543EA2201B54EB00AB6B22 /* Sources */,
+				1583CECBD0D6C8B1703D7D5C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,6 +398,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 92DE79C020A49A56002E73F4 /* Build configuration list for PBXNativeTarget "WebPageSharing" */;
 			buildPhases = (
+				EBC76E29082DD3D927078510 /* [CP] Check Pods Manifest.lock */,
 				92DE79B120A49A56002E73F4 /* Sources */,
 				92DE79B220A49A56002E73F4 /* Frameworks */,
 				92DE79B320A49A56002E73F4 /* Resources */,
@@ -417,6 +491,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7C1414613ACBB991ABBE090C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VeilleTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		91A80DBD88EA9D98715CF307 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Veille-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B33C922FA8473EF69C8568D6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Veille/Pods-Veille-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Siesta/Siesta.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Siesta.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Veille/Pods-Veille-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC76E29082DD3D927078510 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WebPageSharing-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		92543E8C201B54EA00AB6B22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -426,6 +575,7 @@
 				9220CAAE20CDA3B000EF9BE8 /* UIImageColors.swift in Sources */,
 				92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */,
 				9220CAA320CDA0A100EF9BE8 /* RootViewController.swift in Sources */,
+				9247E89120D9A81E00340C18 /* ArticleDTO.swift in Sources */,
 				92543E94201B54EA00AB6B22 /* AppDelegate.swift in Sources */,
 				9236E1C6202717D700136F74 /* DetailNewsViewModelProtocol.swift in Sources */,
 				9220CAB220CDA3BF00EF9BE8 /* Utilities.swift in Sources */,
@@ -436,6 +586,7 @@
 				9220CAB420CDA3CC00EF9BE8 /* DateExtension.swift in Sources */,
 				9220CA9E20CD9B0900EF9BE8 /* Managed.swift in Sources */,
 				92EE65C420A4B78E00B0AD18 /* CoreDataStack.swift in Sources */,
+				9247E89420DA2A3B00340C18 /* UserDTO.swift in Sources */,
 				92C4B3E2201C9EDE00483521 /* APIService.swift in Sources */,
 				9220CAA020CD9F2A00EF9BE8 /* DesignTools.swift in Sources */,
 				9236E1C8202717E200136F74 /* DetailNewsViewModel.swift in Sources */,
@@ -623,6 +774,7 @@
 		};
 		92543EB0201B54EB00AB6B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28A4901900B15EC5EC9E7ADA /* Pods-Veille.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -632,6 +784,7 @@
 				INFOPLIST_FILE = Veille/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.anthony.Veille;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -641,6 +794,7 @@
 		};
 		92543EB1201B54EB00AB6B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E97FA588B095A3BF9666D8E2 /* Pods-Veille.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -659,6 +813,7 @@
 		};
 		92543EB3201B54EB00AB6B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0498C5E6D965EE0FE4127D4A /* Pods-VeilleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -676,6 +831,7 @@
 		};
 		92543EB4201B54EB00AB6B22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC00F4E1F423553E43071801 /* Pods-VeilleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,6 +849,7 @@
 		};
 		92DE79C120A49A56002E73F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270B2D1575CED6B19922F390 /* Pods-WebPageSharing.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = WebPageSharing/WebPageSharing.entitlements;
@@ -711,6 +868,7 @@
 		};
 		92DE79C220A49A56002E73F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 131D61B5664BB6DFBC76E436 /* Pods-WebPageSharing.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = YES;
 				CODE_SIGN_ENTITLEMENTS = WebPageSharing/WebPageSharing.entitlements;

@@ -18,24 +18,6 @@ class Article: NSManagedObject, Encodable {
     @NSManaged var createdDate: Date
     @NSManaged var id: Int32
     //var tags:[String]?
-
-    enum CodingKeys: String, CodingKey {
-        case title
-        case summary = "description"
-        case link
-        case image = "imageURL"
-        case createdDate = "date"
-    }
-    
-    
-    public func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        try container.encode(self.title, forKey: .title)
-        try container.encodeIfPresent(self.summary, forKey: .summary)
-        try container.encodeIfPresent(self.image, forKey: .image)
-        try container.encode(self.link, forKey: .link)
-        try container.encode(self.createdDate.toIso8601(), forKey: .createdDate)
-    }
     
 }
 
@@ -46,48 +28,4 @@ extension Article: Managed {
     static var defaultSortDescriptors: [NSSortDescriptor] {
         return [NSSortDescriptor(key: #keyPath(createdDate), ascending: false)]
     }
-}
-
-extension Article: CoreDataDecodable{
-    static func findOrCreate(for dto: Article.DTO, in context: NSManagedObjectContext) throws -> Self {
-        return self.init()
-    }
-    
-    func update(from dto: Article.DTO) throws {
-        id = dto.id
-        title = dto.title
-        summary = dto.summary
-        
-        guard let url = URL(string: dto.link) else {
-            let context = DecodingError.Context(codingPath: [CodingKeys.link], debugDescription: "Link string is not convertible to URL")
-            throw DecodingError.typeMismatch(URL.self, context)
-        }
-        
-        link = url
-    }
-    
-    struct DTO: Decodable {
-        
-        let id: Int32
-        let title: String
-        let summary: String?
-        let link: String!
-        //let image: String?
-        
-        enum CodingKeys: String, CodingKey {
-            case id
-            case title
-            case summary = "description"
-            case link
-            //case image = "imageURL"
-            //case createdDate = "date"
-        }
-        
-        
-    }
-    
-}
-
-extension CodingUserInfoKey {
-    static let context = CodingUserInfoKey(rawValue: "context")
 }
