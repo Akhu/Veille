@@ -21,7 +21,7 @@ target 'Veille' do
   # Pods for Veille
   pod 'Firebase/Core'
   pod 'Firebase/Database'
-  
+  pod 'SwiftMessages'
   pod 'CodableFirebase'
 
   target 'VeilleTests' do

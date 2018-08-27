@@ -53,11 +53,15 @@ PODS:
     - nanopb/encode (= 0.3.8)
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
+  - SwiftMessages (4.1.4):
+    - SwiftMessages/App (= 4.1.4)
+  - SwiftMessages/App (4.1.4)
 
 DEPENDENCIES:
   - CodableFirebase
   - Firebase/Core
   - Firebase/Database
+  - SwiftMessages
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -71,6 +75,7 @@ SPEC REPOS:
     - GoogleUtilities
     - leveldb-library
     - nanopb
+    - SwiftMessages
 
 SPEC CHECKSUMS:
   CodableFirebase: 4b865f58c583a6c0ef8c81c6b12c6bf15ebd9181
@@ -83,7 +88,8 @@ SPEC CHECKSUMS:
   GoogleUtilities: 06b66f9567769a7958db20a92f0128b2843e49d5
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
+  SwiftMessages: 2c33fdee8b8f38dfc7e1036684456b505891da8c
 
-PODFILE CHECKSUM: 4205210a625c4e83ee687ea590ec9716600a5d3b
+PODFILE CHECKSUM: 0bb7fe918a1b27f15e693b6a16d32daa5727c147
 
 COCOAPODS: 1.5.3

@@ -22,8 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let ref = Database.database().reference(withPath: "veille")
         
-        
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             
