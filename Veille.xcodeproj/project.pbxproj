@@ -32,7 +32,7 @@
 		928A4B9F2132E9BD006EE1C0 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */; };
 		928A4BA221331985006EE1C0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
 		928A4BA321331A6A006EE1C0 /* FirebaseHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */; };
-		928A4BA521332F9E006EE1C0 /* GoogleService-Info-share.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */; };
+		928A4BA521332F9E006EE1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 928A4BA421332F9E006EE1C0 /* GoogleService-Info.plist */; };
 		92939179209A36FD00F2E99C /* mockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92939178209A36FD00F2E99C /* mockData.plist */; };
 		92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92C4B3D1201B5EFE00483521 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
@@ -44,7 +44,6 @@
 		92DE79BB20A49A56002E73F4 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DE79B920A49A56002E73F4 /* MainInterface.storyboard */; };
 		92DE79BF20A49A56002E73F4 /* WebPageSharing.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 92DE79B520A49A56002E73F4 /* WebPageSharing.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		92DE79C320A49A7C002E73F4 /* GetPageMetaData.js in Resources */ = {isa = PBXBuildFile; fileRef = 927729A4209F9E8C009A822E /* GetPageMetaData.js */; };
-		92DE79C420A49A7C002E73F4 /* GetUrl.js in Resources */ = {isa = PBXBuildFile; fileRef = 927729A6209FA351009A822E /* GetUrl.js */; };
 		92EE65C220A4B70100B0AD18 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92EE65C620A4C1D400B0AD18 /* Extension+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE65C520A4C1D400B0AD18 /* Extension+Date.swift */; };
 		CB290D7DDBDDFC95B6BE2AA2 /* Pods_VeilleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C327DE7555A79B80A37C7FEF /* Pods_VeilleTests.framework */; };
@@ -111,10 +110,9 @@
 		92543EAA201B54EB00AB6B22 /* VeilleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VeilleTests.swift; sourceTree = "<group>"; };
 		92543EAC201B54EB00AB6B22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		927729A4209F9E8C009A822E /* GetPageMetaData.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetPageMetaData.js; sourceTree = "<group>"; };
-		927729A6209FA351009A822E /* GetUrl.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = GetUrl.js; sourceTree = "<group>"; };
 		928A4B9B2132E46F006EE1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		928A4B9E2132E9BD006EE1C0 /* FirebaseHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseHandler.swift; sourceTree = "<group>"; };
-		928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-share.plist"; sourceTree = "<group>"; };
+		928A4BA421332F9E006EE1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		92939178209A36FD00F2E99C /* mockData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mockData.plist; sourceTree = "<group>"; };
 		92C4B3CE201B587200483521 /* Veille.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Veille.xcdatamodel; sourceTree = "<group>"; };
 		92C4B3D0201B5EFE00483521 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -337,12 +335,11 @@
 		92DE79B620A49A56002E73F4 /* WebPageSharing */ = {
 			isa = PBXGroup;
 			children = (
-				928A4BA421332F9E006EE1C0 /* GoogleService-Info-share.plist */,
+				928A4BA421332F9E006EE1C0 /* GoogleService-Info.plist */,
 				92DE79C520A4A96D002E73F4 /* WebPageSharing.entitlements */,
 				92DE79B720A49A56002E73F4 /* ShareViewController.swift */,
 				92DE79B920A49A56002E73F4 /* MainInterface.storyboard */,
 				927729A4209F9E8C009A822E /* GetPageMetaData.js */,
-				927729A6209FA351009A822E /* GetUrl.js */,
 				92DE79BC20A49A56002E73F4 /* Info.plist */,
 			);
 			path = WebPageSharing;
@@ -482,8 +479,7 @@
 			files = (
 				92DE79BB20A49A56002E73F4 /* MainInterface.storyboard in Resources */,
 				92DE79C320A49A7C002E73F4 /* GetPageMetaData.js in Resources */,
-				92DE79C420A49A7C002E73F4 /* GetUrl.js in Resources */,
-				928A4BA521332F9E006EE1C0 /* GoogleService-Info-share.plist in Resources */,
+				928A4BA521332F9E006EE1C0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,17 +16,26 @@ class Article: Codable {
     var summary:String?
     var link:URL!
     var image:URL?
+    //@todo : ISO8601 for codable / decodable
     var createdDate: Date
+    //@todo : refactor UUID() into codable / decodable
     var id: String
-    //var tags:[String]?
     
     init?(url: String){
+        //@todo : refactor UUID() into codable / decodable
         self.id = UUID().uuidString
         guard let urlLink = URL(string: url) else { return nil }
         self.createdDate = Date()
         self.link = urlLink
     }
     
+    init?(url: String, title: String){
+        self.id = UUID().uuidString
+        self.title = title
+        self.createdDate = Date()
+        guard let urlLink = URL(string: url) else { return nil }
+        self.link = urlLink
+    }
     
 }
 

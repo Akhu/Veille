@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xy9-zH-aCh">
-                                <rect key="frame" x="0.0" y="30" width="375" height="637"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="articleCell" id="YPr-E7-mEe">
@@ -36,28 +36,17 @@
                                     <outlet property="delegate" destination="wi8-iJ-qqA" id="dch-VH-kBP"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMs-4J-xjA" userLabel="HoldView">
-                                <rect key="frame" x="172.5" y="12" width="30" height="6"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="6" id="9tU-Eh-ppU"/>
-                                    <constraint firstAttribute="width" constant="30" id="dS0-7S-WmC"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="xy9-zH-aCh" firstAttribute="bottom" secondItem="Yuc-zs-Og3" secondAttribute="bottom" id="A9I-zL-KXX"/>
-                            <constraint firstItem="WMs-4J-xjA" firstAttribute="centerX" secondItem="Yuc-zs-Og3" secondAttribute="centerX" id="Ad0-Ba-YhM"/>
                             <constraint firstItem="xy9-zH-aCh" firstAttribute="leading" secondItem="Yuc-zs-Og3" secondAttribute="leading" id="BS7-PO-xXE"/>
-                            <constraint firstItem="WMs-4J-xjA" firstAttribute="top" secondItem="7Yj-uJ-7hU" secondAttribute="top" constant="12" id="S0S-q0-jCk"/>
+                            <constraint firstItem="xy9-zH-aCh" firstAttribute="top" secondItem="Yuc-zs-Og3" secondAttribute="top" id="IkO-VI-Bst"/>
                             <constraint firstItem="xy9-zH-aCh" firstAttribute="trailing" secondItem="Yuc-zs-Og3" secondAttribute="trailing" id="UOR-Dv-FKp"/>
-                            <constraint firstItem="xy9-zH-aCh" firstAttribute="top" secondItem="WMs-4J-xjA" secondAttribute="bottom" constant="12" id="slo-cp-wAc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yuc-zs-Og3"/>
                     </view>
                     <connections>
-                        <outlet property="holdView" destination="WMs-4J-xjA" id="OS6-Ll-XTu"/>
                         <outlet property="tableView" destination="xy9-zH-aCh" id="MAY-ul-wL0"/>
                     </connections>
                 </viewController>

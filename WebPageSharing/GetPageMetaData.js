@@ -6,6 +6,11 @@ GetURL.prototype = {
         var ogMetasKey = "og:";
         var ogData = {}
         
+        var objectToReturn = {
+            "url" : document.URL,
+            "title" : document.title
+        }
+        
         for(var i = 0; i < metas.length; i++){
             if(metas[i] !== undefined){
                 var currentMeta = metas[i];
@@ -13,11 +18,21 @@ GetURL.prototype = {
                     if(currentMeta.getAttribute('property').indexOf(ogMetasKey) !== -1) {
                         var propertyKey = currentMeta.getAttribute('property')
                         ogData[propertyKey] = currentMeta.getAttribute('content');
+                        
+                        if (propertyKey === 'og:image' || propertyKey) {
+                            objectToReturn['image'] = currentMeta.getAttribute('content')
+                        }
+                        if (propertyKey === 'og:description') {
+                            objectToReturn['description'] = currentMeta.getAttribute('content')
+                        }
                     }
                 }
             }
         }
-        arguments.completionFunction({ "ogTags" : ogData, "url" : document.URL, "title" : document.title });
+        
+        objectToReturn['ogTags'] = ogData;
+        
+        arguments.completionFunction(objectToReturn);
     }
 };
 var ExtensionPreprocessingJS = new GetURL;

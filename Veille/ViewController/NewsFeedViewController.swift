@@ -47,8 +47,6 @@ class NewsFeedViewController: UIViewController {
     
     let duration:TimeInterval = 0.575
     
-    @IBOutlet weak var holdView: UIView!
-    
     @IBOutlet weak var tableView: UITableView!
     
     var parentReceiptViewController: RootViewController? {
@@ -61,14 +59,6 @@ class NewsFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapHandler))
-        self.holdView.addGestureRecognizer(tapGesture)
-        
-        let gesture = UIPanGestureRecognizer(target: self, action: #selector(gestureHandler))
-        self.view.addGestureRecognizer(gesture)
-        
-        self.holdView.layer.cornerRadius = self.holdView.bounds.height / 2
         
         articleRef.observe(.value, with: { snapshot in
             print(snapshot.value as Any)
@@ -147,7 +137,6 @@ extension NewsFeedViewController {
     
     func roundView() {
         self.view.layer.cornerRadius = 6
-        self.holdView.layer.cornerRadius = self.holdView.bounds.height / 2
         self.view.clipsToBounds = true
     }
 }

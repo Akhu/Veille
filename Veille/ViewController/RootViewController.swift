@@ -166,8 +166,8 @@ class RootViewController: UIViewController, SegueHandler {
         self.newFeedTableViewSheetController.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.newFeedTableViewSheetController.view.layer.cornerRadius = 20
         
-        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseIn, animations: {
-            self.newFeedTableViewSheetController.view.frame = CGRect(x: self.view.frame.minX, y: self.view.frame.maxY - RootViewController.bottomSheetViewCollapsedHeight, width: self.view.frame.width, height: self.view.frame.height)
+        UIView.animate(withDuration: 0.3, delay: 0.1, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseInOut, animations: {
+            self.newFeedTableViewSheetController.view.frame = CGRect(x: self.view.frame.minX, y: RootViewController.bottomSheetViewExpandedTopMargin, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: nil)
     }
     

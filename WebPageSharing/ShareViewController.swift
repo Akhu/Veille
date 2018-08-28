@@ -24,6 +24,8 @@ class ShareViewController: SLComposeServiceViewController {
         super.viewDidLoad()
         print("didLoad")
         
+        if let _ = FirebaseApp.app() {} else { FirebaseApp.configure() }
+        
         //self.view.backgroundColor = UIColor(red: 61/255, green: 81/255, blue: 156/255, alpha: 0.7)
         
         guard let extensionItems = extensionContext?.inputItems as? [NSExtensionItem] else { return }
@@ -42,27 +44,33 @@ class ShareViewController: SLComposeServiceViewController {
                 }
             }
         }
-        
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        print(self.view.subviews)
     }
     
     override func didSelectPost() {
-        let filePath = Bundle.main.path(forResource: "GoogleService-Info-share", ofType: "plist")
-        guard let fileopts = FirebaseOptions(contentsOfFile: filePath!) else { assert(false, "Coulnd't load config file") }
-        FirebaseApp.configure(options: fileopts
-        )
         // This is called after the user selects Post. Do the upload of contentText and/or NSExtensionContext attachments.
         guard let gatheredData = self.gatheredDictionnary else { return }
+        
         if gatheredData.count > 0 {
             print(gatheredData)
+            
             if let url = gatheredData.value(forKey: "url") as? String, let title = gatheredData.value(forKey: "title") as? String {
-                if let articleToSave = Article(url: url) {
-                    articleToSave.title = title
+                
+                if let articleToSave = Article(url: url, title: title) {
+                    
+                    if let pageImage = gatheredData.value(forKey: "image") as? String{
+                        if let imageUrl = URL(string: pageImage) {
+                            articleToSave.image = imageUrl
+                        }
+                    }
+                    
+                    if let pageDescription = gatheredData.value(forKey: "description") as? String {
+                        articleToSave.summary = pageDescription
+                    }
+                    
                     do {
                         try articleToSave.save()
                     } catch let error {
@@ -71,8 +79,6 @@ class ShareViewController: SLComposeServiceViewController {
                 }
             }
         }
-        
-        
         // Inform the host that we're done, so it un-blocks its UI. Note: Alternatively you could call super's -didSelectPost, which will similarly complete the extension context.
         self.extensionContext!.completeRequest(returningItems: [], completionHandler: nil)
     }
