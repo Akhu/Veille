@@ -11,34 +11,23 @@ import UIKit
 import Firebase
 import CodableFirebase
 
-extension NewsFeedViewController: UITableViewDelegate, UITableViewDataSource {
-    //FetchResult controller will manage this instance with the control of TableViewDataSource
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  self.tableView.dequeueReusableCell(withIdentifier: "articleCell", for: indexPath) as UITableViewCell
-        cell.textLabel?.text = self.articles[indexPath.row].link.absoluteString
-        return cell
-    }
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+extension NewsFeedViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.articles.count
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            let article = self.articles[indexPath.row]
-            article.ref.removeValue()
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell =  self.collectionView.dequeueReusableCell(withReuseIdentifier: "articleCell", for: indexPath) as? ArticleCell else { fatalError("Wrong cell identifier or class") }
+        cell.configure(for: self.articles[indexPath.row])
+        return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let article = self.articles[indexPath.row]
         UIApplication.shared.open(article.link, options: [:], completionHandler: nil)
     }
+    
+    
 }
 
 class NewsFeedViewController: UIViewController {
@@ -47,7 +36,7 @@ class NewsFeedViewController: UIViewController {
     
     let duration:TimeInterval = 0.575
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     var parentReceiptViewController: RootViewController? {
         get {
@@ -70,7 +59,7 @@ class NewsFeedViewController: UIViewController {
                         self.articles.append(try FirebaseDecoder().decode(Article.self, from: articleSnapshot.value))
                     }
                 }
-                self.tableView.reloadData()
+                self.collectionView.reloadData()
             } catch let exception {
                 print(exception)
             }

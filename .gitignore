@@ -4,7 +4,7 @@
 
 .DS_Store
 Veille/GoogleService-Info.plist
-WebPageSharing/GoogleService-Info-share.plist
+WebPageSharing/GoogleService-Info.plist
 ## Build generated
 build/
 DerivedData/

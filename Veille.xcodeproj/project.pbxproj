@@ -18,12 +18,10 @@
 		9220CAB020CDA3B700EF9BE8 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */; };
 		9220CAB220CDA3BF00EF9BE8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */; };
 		9220CAB420CDA3CC00EF9BE8 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9220CAB320CDA3CC00EF9BE8 /* DateExtension.swift */; };
-		9236E1C6202717D700136F74 /* DetailNewsViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236E1C5202717D700136F74 /* DetailNewsViewModelProtocol.swift */; };
-		9236E1C8202717E200136F74 /* DetailNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */; };
 		9247E89120D9A81E00340C18 /* ArticleDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247E89020D9A81E00340C18 /* ArticleDTO.swift */; };
 		9247E89420DA2A3B00340C18 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9247E89320DA2A3B00340C18 /* UserDTO.swift */; };
+		925017EB213715AD0053E471 /* DispatchQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925017EA213715AD0053E471 /* DispatchQueue.swift */; };
 		92543E94201B54EA00AB6B22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543E93201B54EA00AB6B22 /* AppDelegate.swift */; };
-		92543E96201B54EB00AB6B22 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92543E95201B54EB00AB6B22 /* FeedViewController.swift */; };
 		92543E9B201B54EB00AB6B22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92543E99201B54EB00AB6B22 /* Main.storyboard */; };
 		92543E9D201B54EB00AB6B22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92543E9C201B54EB00AB6B22 /* Assets.xcassets */; };
 		92543EA0201B54EB00AB6B22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92543E9E201B54EB00AB6B22 /* LaunchScreen.storyboard */; };
@@ -36,7 +34,6 @@
 		92939179209A36FD00F2E99C /* mockData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 92939178209A36FD00F2E99C /* mockData.plist */; };
 		92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3CD201B587200483521 /* Veille.xcdatamodeld */; };
 		92C4B3D1201B5EFE00483521 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3D0201B5EFE00483521 /* Article.swift */; };
-		92C4B3E4201CB4C600483521 /* NewsFeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3E3201CB4C600483521 /* NewsFeedViewModelProtocol.swift */; };
 		92C4B3E6201CB56500483521 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3E5201CB56500483521 /* NewsFeedViewModel.swift */; };
 		92C4B3E8201CB62C00483521 /* Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C4B3E7201CB62C00483521 /* Tag.swift */; };
 		92D3E5F721347F08003C3C29 /* ViewControllerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D3E5F621347F08003C3C29 /* ViewControllerAnimation.swift */; };
@@ -95,13 +92,11 @@
 		9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
 		9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		9220CAB320CDA3CC00EF9BE8 /* DateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
-		9236E1C5202717D700136F74 /* DetailNewsViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewModelProtocol.swift; sourceTree = "<group>"; };
-		9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailNewsViewModel.swift; sourceTree = "<group>"; };
 		9247E89020D9A81E00340C18 /* ArticleDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDTO.swift; sourceTree = "<group>"; };
 		9247E89320DA2A3B00340C18 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		925017EA213715AD0053E471 /* DispatchQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchQueue.swift; sourceTree = "<group>"; };
 		92543E90201B54EA00AB6B22 /* Veille.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Veille.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92543E93201B54EA00AB6B22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		92543E95201B54EB00AB6B22 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		92543E9A201B54EB00AB6B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92543E9C201B54EB00AB6B22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92543E9F201B54EB00AB6B22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -116,7 +111,6 @@
 		92939178209A36FD00F2E99C /* mockData.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = mockData.plist; sourceTree = "<group>"; };
 		92C4B3CE201B587200483521 /* Veille.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Veille.xcdatamodel; sourceTree = "<group>"; };
 		92C4B3D0201B5EFE00483521 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
-		92C4B3E3201CB4C600483521 /* NewsFeedViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModelProtocol.swift; sourceTree = "<group>"; };
 		92C4B3E5201CB56500483521 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 		92C4B3E7201CB62C00483521 /* Tag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tag.swift; sourceTree = "<group>"; };
 		92D3E5F621347F08003C3C29 /* ViewControllerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAnimation.swift; sourceTree = "<group>"; };
@@ -193,6 +187,7 @@
 				9220CAAF20CDA3B700EF9BE8 /* SegueHandler.swift */,
 				9220CAB120CDA3BF00EF9BE8 /* Utilities.swift */,
 				9220CA9F20CD9F2A00EF9BE8 /* DesignTools.swift */,
+				925017EA213715AD0053E471 /* DispatchQueue.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -285,10 +280,7 @@
 		92C4B3DD201C9C7300483521 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				92C4B3E3201CB4C600483521 /* NewsFeedViewModelProtocol.swift */,
 				92C4B3E5201CB56500483521 /* NewsFeedViewModel.swift */,
-				9236E1C5202717D700136F74 /* DetailNewsViewModelProtocol.swift */,
-				9236E1C7202717E200136F74 /* DetailNewsViewModel.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -297,7 +289,6 @@
 			isa = PBXGroup;
 			children = (
 				9220CA9B20CD99F900EF9BE8 /* NewsFeedViewController.swift */,
-				92543E95201B54EB00AB6B22 /* FeedViewController.swift */,
 				9220CAA220CDA0A100EF9BE8 /* RootViewController.swift */,
 			);
 			path = ViewController;
@@ -576,21 +567,18 @@
 				9220CAA720CDA19500EF9BE8 /* ArticleTableViewCell.swift in Sources */,
 				9220CAAE20CDA3B000EF9BE8 /* UIImageColors.swift in Sources */,
 				92C4B3CF201B587300483521 /* Veille.xcdatamodeld in Sources */,
+				925017EB213715AD0053E471 /* DispatchQueue.swift in Sources */,
 				9220CAA320CDA0A100EF9BE8 /* RootViewController.swift in Sources */,
 				9247E89120D9A81E00340C18 /* ArticleDTO.swift in Sources */,
 				92543E94201B54EA00AB6B22 /* AppDelegate.swift in Sources */,
-				9236E1C6202717D700136F74 /* DetailNewsViewModelProtocol.swift in Sources */,
 				92D3E5F721347F08003C3C29 /* ViewControllerAnimation.swift in Sources */,
 				928A4B9F2132E9BD006EE1C0 /* FirebaseHandler.swift in Sources */,
 				9220CAB220CDA3BF00EF9BE8 /* Utilities.swift in Sources */,
 				9220CAB020CDA3B700EF9BE8 /* SegueHandler.swift in Sources */,
 				9220CAAA20CDA25900EF9BE8 /* FirebaseDB.swift in Sources */,
-				92C4B3E4201CB4C600483521 /* NewsFeedViewModelProtocol.swift in Sources */,
-				92543E96201B54EB00AB6B22 /* FeedViewController.swift in Sources */,
 				9220CAB420CDA3CC00EF9BE8 /* DateExtension.swift in Sources */,
 				9247E89420DA2A3B00340C18 /* UserDTO.swift in Sources */,
 				9220CAA020CD9F2A00EF9BE8 /* DesignTools.swift in Sources */,
-				9236E1C8202717E200136F74 /* DetailNewsViewModel.swift in Sources */,
 				92EE65C620A4C1D400B0AD18 /* Extension+Date.swift in Sources */,
 				92C4B3E8201CB62C00483521 /* Tag.swift in Sources */,
 				9220CA9C20CD99F900EF9BE8 /* NewsFeedViewController.swift in Sources */,

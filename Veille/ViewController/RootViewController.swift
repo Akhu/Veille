@@ -142,7 +142,7 @@ class RootViewController: UIViewController, SegueHandler {
     
     // - MARK: Model
     
-    lazy var newsFeedVM:NewsFeedViewModelProtocol = {
+    lazy var newsFeedVM = {
         return NewsFeedViewModel()
     }()
     

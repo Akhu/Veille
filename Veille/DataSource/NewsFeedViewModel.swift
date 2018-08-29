@@ -10,7 +10,7 @@ import Foundation
 import CoreData
 import UIKit
 
-class NewsFeedViewModel: NSObject, NewsFeedViewModelProtocol{
+class NewsFeedViewModel: NSObject{
     
     
     override init() {

@@ -49,4 +49,8 @@ extension Article {
         let encodedData = try? FirebaseEncoder().encode(self)
         articleRef.child(self.id).setValue(encodedData)
     }
+    
+    func remove() {
+        self.ref.removeValue()
+    }
 }
